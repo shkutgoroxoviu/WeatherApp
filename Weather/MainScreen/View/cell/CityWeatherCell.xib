@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityWeatherCell" id="KGk-i7-Jjw" customClass="CityWeatherCell" customModule="Weather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Москва" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jK1-2k-khc">
+                        <rect key="frame" x="16" y="12" width="78" height="21"/>
+                        <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFm-yS-GmH">
+                        <rect key="frame" x="379" y="3.5" width="24" height="38.5"/>
+                        <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="23"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Пасмурно" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0M-Kr-5Ge">
+                        <rect key="frame" x="142" y="11.5" width="229" height="22"/>
+                        <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jK1-2k-khc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0xD-8T-q3t"/>
+                    <constraint firstAttribute="trailing" secondItem="iFm-yS-GmH" secondAttribute="trailing" constant="11" id="6Hz-K6-Qhq"/>
+                    <constraint firstItem="iFm-yS-GmH" firstAttribute="leading" secondItem="V0M-Kr-5Ge" secondAttribute="trailing" constant="8" symbolic="YES" id="8LC-rc-EFB"/>
+                    <constraint firstItem="iFm-yS-GmH" firstAttribute="centerY" secondItem="V0M-Kr-5Ge" secondAttribute="centerY" id="F8g-CU-zPL"/>
+                    <constraint firstAttribute="bottom" secondItem="jK1-2k-khc" secondAttribute="bottom" constant="11" id="bMJ-vo-idA"/>
+                    <constraint firstItem="V0M-Kr-5Ge" firstAttribute="centerY" secondItem="jK1-2k-khc" secondAttribute="centerY" id="mbQ-eT-iWn"/>
+                    <constraint firstItem="V0M-Kr-5Ge" firstAttribute="leading" secondItem="jK1-2k-khc" secondAttribute="trailing" constant="48" id="trP-ls-43s"/>
+                    <constraint firstItem="jK1-2k-khc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="vpN-Et-b1w"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cityLabel" destination="jK1-2k-khc" id="avt-nE-wjE"/>
+                <outlet property="statusWeatherLabel" destination="V0M-Kr-5Ge" id="CdR-Jq-hvF"/>
+                <outlet property="temperatureLabel" destination="iFm-yS-GmH" id="kxc-Fg-8qt"/>
+            </connections>
+            <point key="canvasLocation" x="-337.68115942028987" y="50.892857142857139"/>
+        </tableViewCell>
+    </objects>
+</document>
